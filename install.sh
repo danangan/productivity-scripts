@@ -11,6 +11,7 @@ SOURCE_STR="source ~/.productivity_script.sh"
 insert_into_shell_config() {
     local shell_config_file=$1
     if ! grep -Fxq "$SOURCE_STR" "$shell_config_file"; then
+        echo "# Utilities script" >> "$shell_config_file"
         echo "$SOURCE_STR" >> "$shell_config_file"
         echo "Script insterted into $shell_config_file."
     else
