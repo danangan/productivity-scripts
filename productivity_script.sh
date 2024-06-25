@@ -1,4 +1,3 @@
-
 # This function allows you to do git commit that accept the messages as parameters
 # Example usage: commit My commit message
 function commit() {
@@ -18,9 +17,6 @@ function commit() {
 
     # Commit with the provided message
     git commit -m "$COMMIT_MESSAGE"
-
-    # Push the changes
-    git push
 
     # Return to the original directory
     cd -
